@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             xmlns:local="clr-namespace:HijriCalendarType"
+             x:Class="HijriCalendarType.MainPage">
+    <ContentPage.BindingContext>
+        <local:SchedulerViewModel/>
+    </ContentPage.BindingContext>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           CalendarType="Hijri" 
+                           View="TimelineWeek" 
+                           AppointmentsSource="{Binding Tasks}"
+                           AllowedViews="TimelineWeek,TimelineMonth"
+                           FirstDayOfWeek="Monday" >
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView Resources="{Binding Resources}" />
+        </scheduler:SfScheduler.ResourceView>
+        <scheduler:SfScheduler.Behaviors>
+            <local:SchedulerBehavior/>
+        </scheduler:SfScheduler.Behaviors>
+    </scheduler:SfScheduler>
+
+</ContentPage>
