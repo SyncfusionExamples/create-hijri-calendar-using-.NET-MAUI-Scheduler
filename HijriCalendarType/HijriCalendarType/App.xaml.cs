@@ -11,6 +11,7 @@ public partial class App : Application
 		InitializeComponent();
 
         CultureInfo.CurrentUICulture = new CultureInfo("ar-AE");
+		//// To localize the text (Today, Allowed scheduler views) used in the scheduler.
         SfSchedulerResources.ResourceManager = new ResourceManager("HijriCalendarType.Resources.SfScheduler", Application.Current.GetType().Assembly);
 
         MainPage = new MainPage();

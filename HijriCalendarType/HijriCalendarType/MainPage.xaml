@@ -7,18 +7,20 @@
     <ContentPage.BindingContext>
         <local:SchedulerViewModel/>
     </ContentPage.BindingContext>
+    <Border Margin="10,15,10,10" Stroke="lightgray">
     <scheduler:SfScheduler x:Name="Scheduler" 
                            CalendarType="Hijri" 
-                           View="TimelineWeek" 
                            AppointmentsSource="{Binding Tasks}"
+                           View="TimelineWeek" 
                            AllowedViews="TimelineWeek,TimelineMonth"
-                           FirstDayOfWeek="Monday" >
+                           FirstDayOfWeek="Monday"
+                          >
         <scheduler:SfScheduler.ResourceView>
             <scheduler:SchedulerResourceView Resources="{Binding Resources}" />
         </scheduler:SfScheduler.ResourceView>
         <scheduler:SfScheduler.Behaviors>
             <local:SchedulerBehavior/>
         </scheduler:SfScheduler.Behaviors>
-    </scheduler:SfScheduler>
-
+        </scheduler:SfScheduler>
+    </Border>
 </ContentPage>
