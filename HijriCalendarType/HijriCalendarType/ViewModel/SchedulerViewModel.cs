@@ -14,7 +14,7 @@ namespace HijriCalendarType
         /// <summary>
         /// Gets or sets resources to the scheduler.
         /// </summary>
-        public List<SchedulerResource> Resources { get; set; }
+        public List<SchedulerResource>? Resources { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulerViewModel" /> class.

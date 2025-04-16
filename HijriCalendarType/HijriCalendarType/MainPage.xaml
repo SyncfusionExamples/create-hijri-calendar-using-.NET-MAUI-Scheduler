@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              xmlns:local="clr-namespace:HijriCalendarType"
-             x:Class="HijriCalendarType.MainPage">
+             x:Class="HijriCalendarType.MainPage"
+             x:DataType="local:SchedulerViewModel">
     <ContentPage.BindingContext>
         <local:SchedulerViewModel/>
     </ContentPage.BindingContext>
